@@ -1,0 +1,60 @@
+Lunes 19/8/2019 Hora: 18:01
+================================================================ INICIO =============================================================
+Instalar GIT
+apt-get install git
+
+Configuración global
+git config --global user.name "Alejandro Lemus"
+git config --global user.email "alemus@informaticaylogistica.com"
+git config --global core.editor 
+apt-get install kdiff3
+git config --global merge.tool kdiff3
+git config --list
+
+Hay 3 estados de los archivos:
+Archivos no trackeados
+Archivos reconocidos por git
+Archivos confirmados a subir
+
+git init proyecto1   = para iniciar nuestro primer proyecto
+ls -la  muestra hasta los archivos ocultos
+
+git add prueba.php agregar archivos para que sean trackeados
+git status muestra la informacion general de los archivos
+git add --all   o git add . Para agregar todos los archivos 
+git commit -m 'Commit inicial'
+git commit -am ''
+
+git clone -v 
+
+git status Para ver como estamos
+
+para ver las diferencias
+git diff -- prueba.php
+
+================================================================ FIN ===============================================================
+
+Martes 20/8/2019 Hora: 16:15
+================================================================ INICIO ============================================================
+git config --global credential.helper store			Para que ya no nos pida a cada rato las credenciales de GITHUB
+git checkout --<archivo> 					Deshacer los cambios realizados
+git merge 							unir dos ramas
+git remote 							centralizar un repo
+git stash							ver sin hacer cambios
+git show 							para ver como va el proyecto
+git checkout alejandro						cambiandome a la rama de alejandro
+git pull origin alejandro					descargando el contenido de la rama de alejandro
+git reset							Deshacer o volver a un momento donde mi rama estaba estable
+git reset 
+
+
+
+============================================================= COMPOSER =============================================================
+Composer no es un gestor de paquetes, 
+
+composer install
+composer update
+composer require 				Para agregar un paquete 
+
+
+================================================================ FIN ===============================================================
