@@ -1,41 +1,46 @@
-Lunes 19/8/2019 Hora: 18:01
+===================================================== CAPACITACIONES DE SYMFONY ====================================================
+
+Tema: Manejo de GIT
+Lunes 19/8/2019 Hora: 18:01 UTC-6
+
 ================================================================ INICIO =============================================================
+================================================================ GIT ===============================================================
 Instalar GIT
 apt-get install git
 
-Configuración global
+Configuración global de nuestro git cuando iniciamos 
 git config --global user.name "Alejandro Lemus"
-git config --global user.email "alemus@informaticaylogistica.com"
-git config --global core.editor 
+git config --global user.email "jose_lemus@outlook.com"
+git config --global core.editor nano
 apt-get install kdiff3
 git config --global merge.tool kdiff3
 git config --list
+git config --global credential.helper store
 
 Hay 3 estados de los archivos:
 Archivos no trackeados
 Archivos reconocidos por git
 Archivos confirmados a subir
 
-git init proyecto1   = para iniciar nuestro primer proyecto
-ls -la  muestra hasta los archivos ocultos
-
-git add prueba.php agregar archivos para que sean trackeados
-git status muestra la informacion general de los archivos
-git add --all   o git add . Para agregar todos los archivos 
-git commit -m 'Commit inicial'
-git commit -am ''
-
-git clone -v 
-
-git status Para ver como estamos
-
-para ver las diferencias
-git diff -- prueba.php
+git init proyecto1   			Para iniciar nuestro primer proyecto denominado 'proyecto1'
+ls -la  				Muestra los archivos de un directorio, hasta los archivos ocultos
+git add prueba.php 			Agrega un archivo para ser trackeado en nuestro repositorio local
+git status 				Muestra la informacion del estado de nuestro repositorio
+git add --all | git add . | git add *	Sirve para agregar todos nuestros que se encuentran contenidos en el directorio
+git commit -m 'Commit inicial'		Funciona para definir el estado de nuestros archivos como: esta es la version que queden
+git commit -am ''			Funciona para hacer un git add y un git commit al mismo tiempo
+git clone -b				Funciona para clonar proyecto desde un repo remoto con un nombre de una rama en especifico
+git diff -- prueba.php			Para verificar los cambios aplicados a un archivos en especifico
 
 ================================================================ FIN ===============================================================
 
-Martes 20/8/2019 Hora: 16:15
-================================================================ INICIO ============================================================
+Temas: Continuacion de GIT e instalacion de composer
+Martes 20/8/2019 Hora: 17:15 UTC-6
+
+================================================================ INICIO ===========================================================
+================================================================ GIT ===============================================================
+
+**** COMANDOS ****						***** DEFINICION *****
 git config --global credential.helper store			Para que ya no nos pida a cada rato las credenciales de GITHUB
 git checkout --<archivo> 					Deshacer los cambios realizados
 git merge 							unir dos ramas
@@ -47,14 +52,11 @@ git pull origin alejandro					descargando el contenido de la rama de alejandro
 git reset							Deshacer o volver a un momento donde mi rama estaba estable
 git reset 
 
-
-
 ============================================================= COMPOSER =============================================================
-Composer no es un gestor de paquetes, 
+Composer no es un gestor de paquetes, es mas que eso, se encarga de conseguir las depencias para la instalacion
 
-composer install
-composer update
-composer require 				Para agregar un paquete 
-
-
+***** COMANDOS *****	***** DEFINICION *****
+composer install	Para realizar la instalacion por primera vez de los bundles (modulos o librerias) de symfony
+composer update		Para actualizar bundles (no se recomienda, porque al actualizar los bundles, podrian dejar de ser compatibles)
+composer require 	Para agregar un bundle de terceros a nuestro proyecto
 ================================================================ FIN ===============================================================
