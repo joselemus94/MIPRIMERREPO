@@ -50,7 +50,8 @@ git show 							para ver como va el proyecto
 git checkout alejandro						cambiandome a la rama de alejandro
 git pull origin alejandro					descargando el contenido de la rama de alejandro
 git reset							Deshacer o volver a un momento donde mi rama estaba estable
-git reset 
+git log               Muestra todos los commits realizados 
+git reset <<Hash>> --hard     retrocede a ese estado los archivos
 
 ============================================================= COMPOSER =============================================================
 Composer no es un gestor de paquetes, es mas que eso, se encarga de conseguir las depencias para la instalacion
