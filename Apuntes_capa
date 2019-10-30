@@ -59,4 +59,16 @@ Composer no es un gestor de paquetes, es mas que eso, se encarga de conseguir la
 composer install	Para realizar la instalacion por primera vez de los bundles (modulos o librerias) de symfony
 composer update		Para actualizar bundles (no se recomienda, porque al actualizar los bundles, podrian dejar de ser compatibles)
 composer require 	Para agregar un bundle de terceros a nuestro proyecto
+
+Esta sirve para mapear a formato XML las entidades en especifico
+php app/console doctrine:mapping:convert xml ./src/CARPETA_CONTENEDORA/NOMBREBundle/Resources/config/doctrine/metadata/orm  --from-database --filter="EntidadAMapear" --force
+
+Esta sirve tambien para mapear las tablas en especifico
+php app/console doctrine:mapping:import CARPETA_CONTENEDORANOMBREBundle annotation --filter="EntidadAMapear"
+
+Esta sirve para generar las entidas ya dentro del sistema
+php app/console doctrine:generate:entities CARPETA_CONTENEDORANOMBREBundle:EntidadAMapear
+
+Para generar los CRUDS de las entidades
+php app/console sonata:admin:generate
 ================================================================ FIN ===============================================================
